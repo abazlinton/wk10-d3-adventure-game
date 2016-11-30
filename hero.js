@@ -5,7 +5,7 @@ var Hero = function(name, favouriteFood){
 }
 
 Hero.prototype = {
-  
+
   talk: function(){
     return "arghhh, " + this.name + " is the name";
   },
@@ -20,6 +20,17 @@ Hero.prototype = {
     if (this.health > 100){
       this.health = 100;
     };
+  },
+  eat: function(food){
+    foodNutrition = food.health;
+    if (food.poisonous){
+      this.decreaseHealth(foodNutrition);
+    } else if (food.name === this.favouriteFood) {
+      superFoodNutrition = foodNutrition * 1.5;
+      this.increaseHealth(superFoodNutrition);
+    } else {
+      this.increaseHealth(foodNutrition);
+    }
   }
 
 };
