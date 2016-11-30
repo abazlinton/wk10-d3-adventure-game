@@ -86,4 +86,12 @@ var fish;
     hero.moveBackward(5);
     assert.equal(5, hero.position);
   });
+
+  it( "moving forward depletes health");
+  
+
+  it( "moving backward depletes health");
+
+
+
 })
