@@ -14,7 +14,7 @@ describe("Food", function(){
   });
 
   it( "has health", function(){
-    assert.equal(25, bread.health);
+    assert.equal(25, bread.nutrition);
   });
 
   it( "starts with poisonous status of false", function(){

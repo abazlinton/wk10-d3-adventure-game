@@ -1,6 +1,6 @@
-var Food = function(name, health) {
+var Food = function(name, nutrition) {
   this.name = name;
-  this.health = health;
+  this.nutrition = nutrition;
   this.poisonous = false;
 }
 

@@ -22,7 +22,7 @@ Hero.prototype = {
     };
   },
   eat: function(food){
-    foodNutrition = food.health;
+    foodNutrition = food.nutrition;
     if (food.poisonous){
       this.decreaseHealth(foodNutrition);
     } else if (food.name === this.favouriteFood) {
