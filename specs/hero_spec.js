@@ -72,4 +72,18 @@ var fish;
     assert.equal(97.5, hero.health);
   });
 
+  it( "starts at beginning of world", function(){
+    assert.equal(0, hero.position);
+  });
+
+  it( "can move forward in world", function(){
+    hero.moveForward(10);
+    assert.equal(10, hero.position);
+  });
+
+  it( "can move backward in word", function(){
+    hero.moveForward(10);
+    hero.moveBackward(5);
+    assert.equal(5, hero.position);
+  });
 })

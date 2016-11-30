@@ -2,6 +2,7 @@ var Hero = function(name, favouriteFood){
   this.name = name;
   this.health = 100;
   this.favouriteFood = favouriteFood;
+  this.position = 0;
 }
 
 Hero.prototype = {
@@ -31,6 +32,12 @@ Hero.prototype = {
     } else {
       this.increaseHealth(foodNutrition);
     }
+  },
+  moveForward: function(steps){
+    this.position += steps;
+  },
+  moveBackward: function(steps){
+    this.position -= steps;
   }
 
 };
